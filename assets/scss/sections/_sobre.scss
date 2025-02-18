@@ -1,0 +1,112 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Sobre Section
+--------------------------------------------------------------*/
+.sobre {
+  .about-image {
+    position: relative;
+    padding: 50px;
+
+    img {
+      border-radius: 1000px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border: 8px solid var(--surface-color);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .curriculo-badge {
+      position: absolute;
+      bottom: 65px;
+      right: 65px;
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 15px;
+
+      .curriculo {
+        font-size: 1.75rem;
+        line-height: 0;
+        margin-bottom: 5px;
+      }
+
+      .text {
+        font-size: 0.7rem;
+        line-height: 1.2;
+      }
+
+      @media (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+
+        .number {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .about-content {
+    .subtitle {
+      color: var(--accent-color);
+      font-size: 1.1rem;
+      margin-bottom: 0rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      i {
+        font-size: 1.2rem;
+      }
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+
+      .highlight {
+        color: var(--accent-color);
+      }
+    }
+
+    .lead {
+      color: color-mix(in srgb, var(--heading-color), transparent 30%);
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .description {
+      color: color-mix(in srgb, var(--default-color), transparent 25%);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .info-item {
+        h6 {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+        }
+
+        p {
+          color: color-mix(in srgb, var(--default-color), transparent 25%);
+          margin: 0;
+        }
+      }
+    }
+  }
+}
